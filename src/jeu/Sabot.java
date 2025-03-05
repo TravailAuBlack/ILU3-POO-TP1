@@ -27,7 +27,7 @@ public class Sabot implements Iterable<Carte> {
 	
 	public void ajouterCarte(Carte carte) throws Exception{
 		if(nbCartes > capaciteMax) {
-			throw new Exception("Capcité trop grande");
+			throw new IllegalStateException("Capcité trop grande");
 		}
 		jeu[nbCartes] = carte;
 		nbCartes++;

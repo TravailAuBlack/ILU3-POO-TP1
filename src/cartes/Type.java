@@ -15,7 +15,6 @@ public enum Type {
 		this.parade = parade;
 		this.botte  = botte;
 	}
-	
 
 
 	
