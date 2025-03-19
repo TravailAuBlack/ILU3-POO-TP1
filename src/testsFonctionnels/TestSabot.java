@@ -5,6 +5,7 @@ import java.util.Iterator;
 import cartes.Botte;
 import cartes.Carte;
 import cartes.JeuDeCartes;
+import jeu.Jeu;
 import jeu.Sabot;
 
 public class TestSabot {
@@ -52,10 +53,13 @@ public class TestSabot {
 	}
 
 	public static void main(String[] args) {
-		TestSabot testPioche = new TestSabot();
+//		TestSabot testPioche = new TestSabot();
 //		testPioche.questionA();
-		testPioche.questionB();
+//		testPioche.questionB();
 //		testPioche.questionC();
+		
+		Jeu jeu = new Jeu();
+		jeu.afficherSabot();
 	}
 
 }

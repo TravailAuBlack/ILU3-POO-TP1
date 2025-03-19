@@ -1,6 +1,8 @@
 package cartes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class JeuDeCartes {
 	private Configuration[] typesDeCartes;
@@ -51,6 +53,27 @@ public class JeuDeCartes {
 		return carte.toArray(new Carte[0]);
 	}
 	
+	public boolean checkCount() {
+		Carte[] carte = donnerCartes();
+		Map<Carte, Integer> carteCount = new HashMap<>();
+		
+		for(Carte cartes : carte) {
+			carteCount.put(cartes, carteCount.getOrDefault(carte, 0) + 1);
+		}
+		
+		for(Configuration config : typesDeCartes) {
+			Carte carteInit = config.getCarte();
+			int i = config.getNbExemplaires();
+			int carteActuelle = carteCount.getOrDefault(carteInit, 0);
+			
+			if(i != carteActuelle)
+				return false;
+		}
+		return true;
+	}
+	
+	
+	
 	
 	
 	
@@ -74,6 +97,11 @@ public class JeuDeCartes {
 		}
 		
 	}
+	
+	
+	
+	
+	
 	
 
 	
