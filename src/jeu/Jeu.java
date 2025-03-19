@@ -27,7 +27,7 @@ public class Jeu {
 
     public void afficherSabot() {
         System.out.print("Cartes du sabot : ");
-        for (Carte carte : sabot) { // Utilisation de l'itérateur de Sabot
+        for(Carte carte : sabot){ 
             System.out.print(carte + ", ");
         }
         System.out.println();
